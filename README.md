@@ -1,4 +1,4 @@
-# Project of Programming and Laboratory A.Y. 2024/2025
+# Programming and Laboratory Project, A.Y. 2024/2025
 
 This project involves implementing a simplified version of the classic game [Tetris](https://www.lumpty.com/amusements/games/tetris/tetris.html), focusing on the fundamental operations of (1) parsing pieces recursively from an input stream, and (2) inserting those pieces in the Tetris grid.
 
@@ -448,7 +448,7 @@ Some important notes:
 
 2. `tetris.cpp` **must not** define the `main` function: we will write it to test your code. If you define the `main` function, the code will not compile during project evaluation.
 
-3. Do not use any namespace.
+3. Do not define any new namespace.
 
 ### Format and Submission Link
 
