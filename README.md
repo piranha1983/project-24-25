@@ -197,9 +197,10 @@ Let us now consider the methods of the `piece` class.
 
 ### Comparison Operators
 
-  - `bool operator==(piece const& rhs) const`: Returns true if the boolean matrices of the pieces are identical.
-  - `bool operator!=(piece const& rhs) const`: Returns true if the boolean matrices of the pieces are not identical.
+  - `bool operator==(piece const& rhs) const`: Returns true if the boolean matrices of the pieces are identical and color is the same.
+  - `bool operator!=(piece const& rhs) const`: Returns true if the boolean matrices of the pieces are not identical or color is not the same.
 
+Note that this takes into account the **rotation** of the pieces.
 For example, the following pieces are to be considered **different** pieces although the second is the rotation of the first.
 
 <p align="center">
