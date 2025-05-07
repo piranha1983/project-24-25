@@ -119,7 +119,7 @@ Figure 1 illustrates a detailed, 8 x 8, graphical example.
 **Note 2:** The input format can contain an arbitrary number of whitespace characters (` `, `\n`, `\t`, etc.). The parser must ignore those characters as seen during lectures. For example, the following
 
 ```
-  4 	
+  4 	75  
     ( (
  [ ]()[
  ]()) (( )[
@@ -128,7 +128,7 @@ Figure 1 illustrates a detailed, 8 x 8, graphical example.
   )() ) )
 ```
 
-is a valid input format for the piece
+is a valid input format for the piece (with associated color 75)
 
 ```
   0 1 2 3
