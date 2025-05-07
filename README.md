@@ -183,7 +183,7 @@ Let us now consider the methods of the `piece` class.
   <img src="figures/rotations.png" width="330">
 </p>
 
-  - `void cut_row(uint32_t i)`: Removes row `i` from the piece, shifting rows above it down.
+  - `void cut_row(uint32_t i)`: Removes row `i` from the piece, shifting rows above it down by **one** row.
 
   For example, if we cut row `i=1` from the following piece, apart from setting cell `(1,j)=false` for all `j=0..m_side-1`, cell (0,2) "shifts" down to take the place of the cell (1,2).
 
