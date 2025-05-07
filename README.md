@@ -66,7 +66,7 @@ The class has of the following attributes:
 
 The recursive input format for a piece is designed to succinctly represent shapes through a hierarchical structure.
 
-The format begins with an integer specifying the side length of the grid, followed by the recursive structure of the grid.
+The format begins with an integer specifying the side length of the grid, followed by an integer specifying the color (1-255), followed by the recursive structure of the grid.
 In general terms, the grid is expressed as a quadruple which stores the four quadrants in the following order: top-left (TL), top-right (TR), bottom-left (BL), and bottom-right (BR).
 
 Specifically, a quadrant can be one of the following three things:
@@ -80,10 +80,10 @@ Specifically, a quadrant can be one of the following three things:
 For instance, the string
 
 ```
-4 (([]()[]())(()[]()[])([]()()())(()[]()()))
+4 75 (([]()[]())(()[]()[])([]()()())(()[]()()))
 ```
 
-corresponds to the following 4 x 4 grid
+corresponds to the following 4 x 4 grid (with associated color 75)
 
 ```
   0 1 2 3
@@ -96,10 +96,10 @@ corresponds to the following 4 x 4 grid
 and the string
 
 ```
-2 ()
+2 75 ()
 ```
 
-corresponds to the 2 x 2 grid
+corresponds to the 2 x 2 grid (with associated color 75)
 
 ```
   0 1
