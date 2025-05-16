@@ -290,7 +290,7 @@ Now, instead, we have four pieces in the field, each with its bottom-left `(x,y)
 
 ### Comparison Operators
 
-  - `bool operator==(tetris const& rhs) const`: Returns true if both Tetris games are identical.
+  - `bool operator==(tetris const& rhs) const`: Returns true if both Tetris games are identical (i.e. if all member variables of the two tetris containers are equal).
   - `bool operator!=(tetris const& rhs) const`: Returns true if the games differ.
 
 ### Game Operations
