@@ -142,7 +142,7 @@ Let us now consider the methods of the `piece` class.
 
 ### Constructors and Destructor
 
-  - `piece()`: Default constructor, initializes an empty piece (i.e., `empty()` must be true after the constructor) with `s=0`, `c=0`, and `m_grid=nullptr`.
+  - `piece()`: Default constructor, initializes an empty piece (i.e., `empty()` must be true after the constructor) with `s=0`, `c=0`, and `m_grid=nullptr`. A piece is "empty" when all the cells in the grid are set to `false`.
   - `piece(uint32_t s, uint8_t c)`: Constructs an empty piece (i.e., `empty()` must be true after the constructor) with side length `s` (must be a power of 2) and color `c`. Throws `tetris_exception` if `s` is not a power of 2, or if `c` is 0. To determine if an integer `s` is a power of 2, you could for example implement a simple iterative algorithm.
   - `piece(piece const& rhs)`: Copy constructor, creates a deep copy of `rhs`.
   - `piece(piece&& rhs)`: Move constructor, transfers ownership from `rhs` to the new piece.
@@ -162,8 +162,8 @@ Let us now consider the methods of the `piece` class.
 
 ### Piece Operations
 
-  - `bool empty(uint32_t i, uint32_t j, uint32_t s) const`: Checks if a square of side `s` whose top-left corner is at (i,j) is empty. Throws `tetris_exception` if out of bounds.
-  - `bool full(uint32_t i, uint32_t j, uint32_t s) const`: Checks if a square of side `s` whose top-left corner is at (i,j) is full.
+  - `bool empty(uint32_t i, uint32_t j, uint32_t s) const`: Checks if a square of side `s` whose top-left corner is at (i,j) is empty. Throws `tetris_exception` if out of bounds. A piece is "empty" if all the cells of its grid are set to `false`.
+  - `bool full(uint32_t i, uint32_t j, uint32_t s) const`: Checks if a square of side `s` whose top-left corner is at (i,j) is full. A piece is "full" if all the cells of its grid are set to `true`.
   - `bool empty() const`: Returns `true` if and only if if the boolean matrix of the piece contains only `false` values.
   - `bool full() const`: Returns `true` if and only if if the boolean matrix of the piece contains only `true` values.
 
