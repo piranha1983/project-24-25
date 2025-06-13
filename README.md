@@ -165,7 +165,7 @@ Let us now consider the methods of the `piece` class.
   - `bool empty(uint32_t i, uint32_t j, uint32_t s) const`: Checks if a square of side `s` whose top-left corner is at (i,j) is empty. Throws `tetris_exception` if out of bounds. A piece is "empty" if all the cells of its grid are set to `false`. You can assume that `s > 0`.
   - `bool full(uint32_t i, uint32_t j, uint32_t s) const`: Checks if a square of side `s` whose top-left corner is at (i,j) is full. A piece is "full" if all the cells of its grid are set to `true`. You can assume that `s > 0`.
   - `bool empty() const`: Returns `true` if and only if the boolean matrix of the piece contains only `false` values or if the piece has been default initialized (`s = 0`).
-  - `bool full() const`: Returns `true` if and only if the boolean matrix of the piece contains only `true` values.
+  - `bool full() const`: Returns `true` if and only if the boolean matrix of the piece contains only `true` values and the side is `s > 0`.
 
   **Note:** The methods `empty(i,j,s)` and `full(i,j,s)` are useful to write the piece is the recursive format to an output stream (see below).
 
