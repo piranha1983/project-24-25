@@ -11,32 +11,32 @@ private:
 };
 
 struct piece {
-    piece();
-    piece(uint32_t s, uint8_t c);
-    piece(piece const& rhs);
-    piece(piece&& rhs);
-    ~piece();
+    piece();  // done
+    piece(uint32_t s, uint8_t c);  // done
+    piece(piece const& rhs);  // done
+    piece(piece&& rhs);  // done
+    ~piece();  // done
 
-    piece& operator=(piece const& rhs);
-    piece& operator=(piece&& rhs);
+    piece& operator=(piece const& rhs);  // done
+    piece& operator=(piece&& rhs);  // done
 
-    bool operator==(piece const& rhs) const;
-    bool operator!=(piece const& rhs) const;
+    bool operator==(piece const& rhs) const;  // done
+    bool operator!=(piece const& rhs) const;  // done
 
-    bool& operator()(uint32_t i, uint32_t j);
-    bool operator()(uint32_t i, uint32_t j) const;
+    bool& operator()(uint32_t i, uint32_t j);  // done
+    bool operator()(uint32_t i, uint32_t j) const;  // done
 
-    bool empty(uint32_t i, uint32_t j, uint32_t s) const;
-    bool full(uint32_t i, uint32_t j, uint32_t s) const;
-    bool empty() const;
-    bool full() const;
+    bool empty(uint32_t i, uint32_t j, uint32_t s) const;  // done
+    bool full(uint32_t i, uint32_t j, uint32_t s) const;  // done
+    bool empty() const;  // done
+    bool full() const;  // done
 
-    void rotate();
-    void cut_row(uint32_t i);
+    void rotate();  // done
+    void cut_row(uint32_t i);  // done
     void print_ascii_art(std::ostream& os) const;
 
-    uint32_t side() const;
-    int color() const;
+    uint32_t side() const;  // done
+    int color() const;  // done
 
 private:
     uint32_t m_side;
@@ -134,3 +134,5 @@ private:
 
 std::ostream& operator<<(std::ostream& os, tetris const& t);
 std::istream& operator>>(std::istream& is, tetris& t);
+
+
